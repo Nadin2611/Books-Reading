@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import '../styles/AuthHeader.css';
+import styles from '../styles/AuthHeader.module.css';
 
 const AuthHeader = () => {
   return (
-    <div className="auth-header">
-      <Link to="/">
-        <div className="logo">BR</div>
+    <div className={styles['auth-header']}>
+      <Link to="/" className={styles.logo}>
+        BR
       </Link>
     </div>
   );

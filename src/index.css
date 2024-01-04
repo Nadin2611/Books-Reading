@@ -2,14 +2,103 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-black);
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local('Montserrat'),
+    url(../src/fonts/Montserrat-SemiBold.woff2) format(woff2),
+    url(../src/fonts/Montserrat-SemiBold.woff) format(woff);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local('Montserrat'),
+    url(../src/fonts/Montserrat-Medium.woff2) format(woff2),
+    url(../src/fonts/Montserrat-Medium.woff) format(woff);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: local('Montserrat'),
+    url(../src/fonts/Montserrat-Light.woff2) format(woff2),
+    url(../src/fonts/Montserrat-Light.woff) format(woff);
+}
+
+@font-face {
+  font-family: 'Abril Fatface';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('Abril Fatface'),
+    url(../src/fonts/AbrilFatface-Regular.woff2) format(woff2),
+    url(../src/fonts/AbrilFatface-Regular.woff) format(woff);
+}
+
+:root {
+  --primary-black: #242a37;
+  --primary-gray: #898f9f;
+  --primary-white: #ffffff;
+  --primary-ligth: #f5f7fa;
+  --primary-orange: #ff6b08;
+  --primary-blue: #f6f7fb;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+  position: absolute;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+button {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+img {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
 }

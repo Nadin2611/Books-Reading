@@ -1,7 +1,7 @@
 .auth-header {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  margin: 0 auto;
 }
 
 .logo {
@@ -9,7 +9,8 @@
   text-decoration: none;
   font-family: Abril Fatface;
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
+
+  cursor: pointer;
   line-height: normal;
 }
