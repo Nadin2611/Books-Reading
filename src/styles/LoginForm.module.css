@@ -11,19 +11,21 @@
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
 }
 
 .labelContainer {
+  padding-top: 28px;
 }
 
 .label {
   display: block;
-  margin-bottom: 5px;
+  text-align: left;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .input {
@@ -57,4 +59,5 @@
   font-weight: 700;
   line-height: 38px; /* 237.5% */
   cursor: pointer;
+  margin: 0 auto;
 }
