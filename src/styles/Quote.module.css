@@ -8,6 +8,16 @@
   font-weight: 500;
   line-height: normal;
   max-width: 229px;
+  padding-bottom: 16px;
+}
+.quoteTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: rgba(9, 30, 63, 0.1);
 }
 
 .quoteAuthor {
