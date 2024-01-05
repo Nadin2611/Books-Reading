@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from '../styles/LoginForm.module.css';
 import { Loader } from './Loader';
 import { Link } from 'react-router-dom';
+import { GoogleButton } from './GoogleButton';
 
 const LoginForm = ({ onLogin, isLoggingIn, error }) => {
   const [email, setEmail] = useState('');
@@ -13,27 +14,17 @@ const LoginForm = ({ onLogin, isLoggingIn, error }) => {
     onLogin({ email, password });
     form.reset();
   };
+  const isFormValid = email.trim() !== '' && password.trim() !== '';
 
   return (
     <div className={styles.formContainer}>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <button
-          className={styles.googleButton}
-          onClick={() => alert('Google button clicked')}
-        >
-          <img
-            src="image/google.svg"
-            alt="Google Logo"
-            width={18}
-            height={18}
-            className={styles.googleIcon}
-          />
-          Google
-        </button>
+        <GoogleButton></GoogleButton>
         <div className={styles.labelWrapper}>
           <div className={styles.labelContainer}>
             <label className={styles.label}>
-              Email
+              <span>Email</span>
+              <span className={styles.required}> *</span>
               <input
                 className={styles.input}
                 type="email"
@@ -48,7 +39,8 @@ const LoginForm = ({ onLogin, isLoggingIn, error }) => {
           </div>
           <div className={styles.labelContainer}>
             <label className={styles.label}>
-              Password
+              <span>Password</span>
+              <span className={styles.required}> *</span>
               <input
                 className={styles.input}
                 type="password"
@@ -66,7 +58,7 @@ const LoginForm = ({ onLogin, isLoggingIn, error }) => {
         <button
           className={styles.loginButton}
           type="submit"
-          disabled={isLoggingIn}
+          disabled={!isFormValid || isLoggingIn}
         >
           Log In
         </button>

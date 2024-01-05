@@ -38,7 +38,15 @@
   padding: 12px 8px;
   box-sizing: border-box;
   margin-top: 8px;
+  background: #f5f7fa;
+  border: none;
+  box-shadow: 0px 1px 2px 0px rgba(29, 29, 27, 0.15) inset;
 }
+
+.required {
+  color: #f25137;
+}
+
 .input::placeholder {
   color: #a6abb9;
   font-size: 14px;
@@ -61,25 +69,14 @@
   cursor: pointer;
 }
 
-.googleButton {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  gap: 10px;
-  color: #707375;
-  text-align: center;
-  width: 150px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 38px; /* 237.5% */
-  cursor: pointer;
-  margin: 0 auto;
+.loginButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 
 .link {
   margin-top: 16px;
+  display: block;
   color: #ff6b08;
   text-align: center;
   font-size: 13px;
@@ -87,4 +84,24 @@
   font-weight: 500;
   line-height: normal;
   text-decoration-line: underline;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #898f9f;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  gap: 4px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+
+.linkRegister {
+  text-decoration: none;
+  color: #ff6b08;
 }

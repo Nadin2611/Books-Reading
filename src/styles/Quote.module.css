@@ -1,22 +1,42 @@
 .quoteContainer {
-  /* Ваші стилі для внутрішнього контейнера тут */
+  display: flex;
+  flex-direction: column;
+  padding-top: 49px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .quoteTitle {
-  text-align: center;
   font-size: 13px;
   font-weight: 500;
   line-height: normal;
   max-width: 229px;
-  padding-bottom: 16px;
+  position: relative;
 }
+.quoteTitle::before {
+  content: '“';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff6b08;
+  text-align: center;
+  font-family: Abril Fatface;
+  font-size: 59px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .quoteTitle::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -16px;
   height: 1px;
+  width: 100px;
   background-color: rgba(9, 30, 63, 0.1);
 }
 
@@ -26,4 +46,6 @@
   font-size: 14px;
   font-weight: 500;
   line-height: normal;
+  padding-top: 28px;
+  padding-bottom: 48px;
 }
