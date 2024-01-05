@@ -1,0 +1,19 @@
+.quoteContainer {
+  /* Ваші стилі для внутрішнього контейнера тут */
+}
+
+.quoteTitle {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  max-width: 229px;
+}
+
+.quoteAuthor {
+  color: var(--primary-gray);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
