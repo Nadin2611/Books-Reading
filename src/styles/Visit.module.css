@@ -76,10 +76,96 @@
   border: 1px solid #000;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:active {
     color: var(--primary-white);
     background-color: var(--primary-orange);
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .visitContainer {
+    background: var(--primary-white);
+    padding-left: 5px;
+    height: 100vh;
+  }
+
+  .heading {
+    font-family: Abril Fatface;
+    font-size: 34px;
+    font-weight: 400;
+    padding: 32px 0px;
+    text-align: center;
+    line-height: 38px; /* 111.765% */
+  }
+
+  .subHeading {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 14px;
+    line-height: 38px; /* 190% */
+  }
+
+  .listContainer {
+    color: var(--primary-gray);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .listWrapper {
+    display: flex;
+
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .listContainer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .listContainer li {
+    position: relative;
+    padding-left: 16px;
+  }
+
+  .listContainer li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 4px;
+    height: 8px;
+    fill: var(--primary-orange);
+    background-image: url('../image/Vector.svg');
+    background-size: cover;
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 61px;
+  }
+
+  .button {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 38px; /* 271.429% */
+    min-width: 130px;
+    height: 40px;
+    border: 1px solid #000;
+    cursor: pointer;
+
+    &:active {
+      color: var(--primary-white);
+      background-color: var(--primary-orange);
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    }
   }
 }
