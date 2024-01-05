@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/Books-Reading/static/css/main.a6598cda.css",
-    "main.js": "/Books-Reading/static/js/main.42503770.js",
+    "main.js": "/Books-Reading/static/js/main.78cbad38.js",
     "static/css/259.01f5c52f.chunk.css": "/Books-Reading/static/css/259.01f5c52f.chunk.css",
     "static/js/259.2542698d.chunk.js": "/Books-Reading/static/js/259.2542698d.chunk.js",
-    "static/css/128.879b477d.chunk.css": "/Books-Reading/static/css/128.879b477d.chunk.css",
+    "static/css/128.748359c4.chunk.css": "/Books-Reading/static/css/128.748359c4.chunk.css",
     "static/js/128.0125ee14.chunk.js": "/Books-Reading/static/js/128.0125ee14.chunk.js",
     "static/js/285.8feb7052.chunk.js": "/Books-Reading/static/js/285.8feb7052.chunk.js",
     "static/js/819.bb244244.chunk.js": "/Books-Reading/static/js/819.bb244244.chunk.js",
@@ -22,10 +22,10 @@
     "index.html": "/Books-Reading/index.html",
     "static/media/Vector.svg": "/Books-Reading/static/media/Vector.795e1f142203650bbf93.svg",
     "main.a6598cda.css.map": "/Books-Reading/static/css/main.a6598cda.css.map",
-    "main.42503770.js.map": "/Books-Reading/static/js/main.42503770.js.map",
+    "main.78cbad38.js.map": "/Books-Reading/static/js/main.78cbad38.js.map",
     "259.01f5c52f.chunk.css.map": "/Books-Reading/static/css/259.01f5c52f.chunk.css.map",
     "259.2542698d.chunk.js.map": "/Books-Reading/static/js/259.2542698d.chunk.js.map",
-    "128.879b477d.chunk.css.map": "/Books-Reading/static/css/128.879b477d.chunk.css.map",
+    "128.748359c4.chunk.css.map": "/Books-Reading/static/css/128.748359c4.chunk.css.map",
     "128.0125ee14.chunk.js.map": "/Books-Reading/static/js/128.0125ee14.chunk.js.map",
     "285.8feb7052.chunk.js.map": "/Books-Reading/static/js/285.8feb7052.chunk.js.map",
     "819.bb244244.chunk.js.map": "/Books-Reading/static/js/819.bb244244.chunk.js.map",
@@ -34,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.a6598cda.css",
-    "static/js/main.42503770.js"
+    "static/js/main.78cbad38.js"
   ]
 }
