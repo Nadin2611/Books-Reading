@@ -1,23 +1,32 @@
 {
   "files": {
-    "main.css": "/Books-Reading/static/css/main.7acaea2f.css",
-    "main.js": "/Books-Reading/static/js/main.55469ef3.js",
-    "static/css/781.0d0b238d.chunk.css": "/Books-Reading/static/css/781.0d0b238d.chunk.css",
-    "static/js/781.7401337e.chunk.js": "/Books-Reading/static/js/781.7401337e.chunk.js",
-    "static/js/38.862a9ac3.chunk.js": "/Books-Reading/static/js/38.862a9ac3.chunk.js",
-    "static/js/285.18bf33d7.chunk.js": "/Books-Reading/static/js/285.18bf33d7.chunk.js",
-    "static/js/819.cd0bcb0e.chunk.js": "/Books-Reading/static/js/819.cd0bcb0e.chunk.js",
+    "main.css": "/Books-Reading/static/css/main.a6598cda.css",
+    "main.js": "/Books-Reading/static/js/main.f09d636f.js",
+    "static/css/944.964430fc.chunk.css": "/Books-Reading/static/css/944.964430fc.chunk.css",
+    "static/js/944.ae4f8dda.chunk.js": "/Books-Reading/static/js/944.ae4f8dda.chunk.js",
+    "static/js/38.1ccba7c3.chunk.js": "/Books-Reading/static/js/38.1ccba7c3.chunk.js",
+    "static/js/285.8feb7052.chunk.js": "/Books-Reading/static/js/285.8feb7052.chunk.js",
+    "static/js/819.bb244244.chunk.js": "/Books-Reading/static/js/819.bb244244.chunk.js",
+    "static/media/Montserrat-SemiBold.woff": "/Books-Reading/static/media/Montserrat-SemiBold.e13f79858a00d4a8bf3a.woff",
+    "static/media/Montserrat-Medium.woff": "/Books-Reading/static/media/Montserrat-Medium.82550f98bf2a7cb54296.woff",
+    "static/media/Montserrat-Light.woff": "/Books-Reading/static/media/Montserrat-Light.a86317d56b35b80c48c1.woff",
+    "static/media/Montserrat-SemiBold.woff2": "/Books-Reading/static/media/Montserrat-SemiBold.7c6d14f8fcac713bc3bd.woff2",
+    "static/media/Montserrat-Medium.woff2": "/Books-Reading/static/media/Montserrat-Medium.b3c1a6e8cee4555b7d8a.woff2",
+    "static/media/Montserrat-Light.woff2": "/Books-Reading/static/media/Montserrat-Light.8847011cd26da5a68d47.woff2",
+    "static/media/AbrilFatface-Regular.woff": "/Books-Reading/static/media/AbrilFatface-Regular.9b226b60928ac923542b.woff",
+    "static/media/AbrilFatface-Regular.woff2": "/Books-Reading/static/media/AbrilFatface-Regular.47cb2c6cd6a02d42103b.woff2",
     "index.html": "/Books-Reading/index.html",
-    "main.7acaea2f.css.map": "/Books-Reading/static/css/main.7acaea2f.css.map",
-    "main.55469ef3.js.map": "/Books-Reading/static/js/main.55469ef3.js.map",
-    "781.0d0b238d.chunk.css.map": "/Books-Reading/static/css/781.0d0b238d.chunk.css.map",
-    "781.7401337e.chunk.js.map": "/Books-Reading/static/js/781.7401337e.chunk.js.map",
-    "38.862a9ac3.chunk.js.map": "/Books-Reading/static/js/38.862a9ac3.chunk.js.map",
-    "285.18bf33d7.chunk.js.map": "/Books-Reading/static/js/285.18bf33d7.chunk.js.map",
-    "819.cd0bcb0e.chunk.js.map": "/Books-Reading/static/js/819.cd0bcb0e.chunk.js.map"
+    "static/media/Vector.svg": "/Books-Reading/static/media/Vector.795e1f142203650bbf93.svg",
+    "main.a6598cda.css.map": "/Books-Reading/static/css/main.a6598cda.css.map",
+    "main.f09d636f.js.map": "/Books-Reading/static/js/main.f09d636f.js.map",
+    "944.964430fc.chunk.css.map": "/Books-Reading/static/css/944.964430fc.chunk.css.map",
+    "944.ae4f8dda.chunk.js.map": "/Books-Reading/static/js/944.ae4f8dda.chunk.js.map",
+    "38.1ccba7c3.chunk.js.map": "/Books-Reading/static/js/38.1ccba7c3.chunk.js.map",
+    "285.8feb7052.chunk.js.map": "/Books-Reading/static/js/285.8feb7052.chunk.js.map",
+    "819.bb244244.chunk.js.map": "/Books-Reading/static/js/819.bb244244.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.55469ef3.js"
+    "static/css/main.a6598cda.css",
+    "static/js/main.f09d636f.js"
   ]
 }
