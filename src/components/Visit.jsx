@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from '../styles/Visit.module.css';
 
 const Visit = () => {
@@ -27,6 +28,14 @@ const Visit = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div className={styles.buttonContainer}>
+        <Link to="/login" className={styles.button}>
+          Log In
+        </Link>
+        <Link to="/register" className={styles.button}>
+          Register
+        </Link>
       </div>
     </div>
   );
