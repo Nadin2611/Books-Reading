@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/Books-Reading/static/css/main.a6598cda.css",
-    "main.js": "/Books-Reading/static/js/main.916d28c5.js",
-    "static/css/944.a0e7c49e.chunk.css": "/Books-Reading/static/css/944.a0e7c49e.chunk.css",
-    "static/js/944.77a93fb4.chunk.js": "/Books-Reading/static/js/944.77a93fb4.chunk.js",
-    "static/js/38.1ccba7c3.chunk.js": "/Books-Reading/static/js/38.1ccba7c3.chunk.js",
+    "main.js": "/Books-Reading/static/js/main.b5968993.js",
+    "static/css/259.01f5c52f.chunk.css": "/Books-Reading/static/css/259.01f5c52f.chunk.css",
+    "static/js/259.c0d028f8.chunk.js": "/Books-Reading/static/js/259.c0d028f8.chunk.js",
+    "static/css/106.c85604a5.chunk.css": "/Books-Reading/static/css/106.c85604a5.chunk.css",
+    "static/js/106.f2b030b0.chunk.js": "/Books-Reading/static/js/106.f2b030b0.chunk.js",
     "static/js/285.8feb7052.chunk.js": "/Books-Reading/static/js/285.8feb7052.chunk.js",
     "static/js/819.bb244244.chunk.js": "/Books-Reading/static/js/819.bb244244.chunk.js",
     "static/media/Montserrat-SemiBold.woff": "/Books-Reading/static/media/Montserrat-SemiBold.e13f79858a00d4a8bf3a.woff",
@@ -18,15 +19,16 @@
     "index.html": "/Books-Reading/index.html",
     "static/media/Vector.svg": "/Books-Reading/static/media/Vector.795e1f142203650bbf93.svg",
     "main.a6598cda.css.map": "/Books-Reading/static/css/main.a6598cda.css.map",
-    "main.916d28c5.js.map": "/Books-Reading/static/js/main.916d28c5.js.map",
-    "944.a0e7c49e.chunk.css.map": "/Books-Reading/static/css/944.a0e7c49e.chunk.css.map",
-    "944.77a93fb4.chunk.js.map": "/Books-Reading/static/js/944.77a93fb4.chunk.js.map",
-    "38.1ccba7c3.chunk.js.map": "/Books-Reading/static/js/38.1ccba7c3.chunk.js.map",
+    "main.b5968993.js.map": "/Books-Reading/static/js/main.b5968993.js.map",
+    "259.01f5c52f.chunk.css.map": "/Books-Reading/static/css/259.01f5c52f.chunk.css.map",
+    "259.c0d028f8.chunk.js.map": "/Books-Reading/static/js/259.c0d028f8.chunk.js.map",
+    "106.c85604a5.chunk.css.map": "/Books-Reading/static/css/106.c85604a5.chunk.css.map",
+    "106.f2b030b0.chunk.js.map": "/Books-Reading/static/js/106.f2b030b0.chunk.js.map",
     "285.8feb7052.chunk.js.map": "/Books-Reading/static/js/285.8feb7052.chunk.js.map",
     "819.bb244244.chunk.js.map": "/Books-Reading/static/js/819.bb244244.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a6598cda.css",
-    "static/js/main.916d28c5.js"
+    "static/js/main.b5968993.js"
   ]
 }
