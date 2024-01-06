@@ -1,3 +1,1 @@
-const LibraryPage = () => {};
-
-export default LibraryPage;
+export default function LibraryPage() {}

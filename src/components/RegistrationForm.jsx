@@ -1,31 +1,33 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/LoginForm.module.css';
-import { Loader } from './Loader';
 import { Link } from 'react-router-dom';
-import { GoogleButton } from './GoogleButton';
+import useAuth from '../services/useAuth';
 
-export const RegistrationForm = ({ onLogin, isLoggingIn, error }) => {
+export const RegistrationForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const { register, isLoggingIn, error } = useAuth();
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault();
-    const form = event.currentTarget;
-    onLogin({ email, password });
-    form.reset();
+
+    if (password !== confirmPassword) {
+      console.error('Passwords do not match');
+      return;
+    }
+
+    try {
+      await register({ name, email, password });
+    } catch (error) {}
   };
-  const isFormValid =
-    name.trim() !== '' &&
-    email.trim() !== '' &&
-    password.trim() !== '' &&
-    confirmPassword.trim() !== '';
+
+  const isFormValid = name && email && password && confirmPassword;
 
   return (
     <div className={styles.formContainer}>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <GoogleButton></GoogleButton>
         <div className={styles.labelWrapper}>
           <div className={styles.labelContainer}>
             <label className={styles.label}>
@@ -81,7 +83,7 @@ export const RegistrationForm = ({ onLogin, isLoggingIn, error }) => {
               <span className={styles.required}> *</span>
               <input
                 className={styles.input}
-                type="confirmPassword"
+                type="password"
                 name="confirmPassword"
                 value={confirmPassword}
                 placeholder="..."
@@ -100,7 +102,7 @@ export const RegistrationForm = ({ onLogin, isLoggingIn, error }) => {
         >
           Register
         </button>
-        {isLoggingIn && Loader}
+
         {error && <p>{error}</p>}
       </form>
       <div className={styles.linkContainer}>

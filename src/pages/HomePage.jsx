@@ -5,7 +5,7 @@ import Visit from 'components/Visit';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-const HomePage = () => {
+export default function HomePage() {
   return (
     <Container>
       <Header></Header>
@@ -15,6 +15,4 @@ const HomePage = () => {
       </Suspense>
     </Container>
   );
-};
-
-export default HomePage;
+}

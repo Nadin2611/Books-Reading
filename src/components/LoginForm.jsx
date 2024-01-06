@@ -1,25 +1,36 @@
 import { useState } from 'react';
-import styles from '../styles/LoginForm.module.css';
-import { Loader } from './Loader';
 import { Link } from 'react-router-dom';
+import styles from '../styles/LoginForm.module.css';
+import useAuth from '../services/useAuth';
+import { Loader } from './Loader';
+
 import { GoogleButton } from './GoogleButton';
 
-const LoginForm = ({ onLogin, isLoggingIn, error }) => {
+const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { login, googleAuth, isLoggingIn, error } = useAuth();
 
   const handleSubmit = event => {
     event.preventDefault();
-    const form = event.currentTarget;
-    onLogin({ email, password });
-    form.reset();
+    login({ email, password });
+    setEmail('');
+    setPassword('');
   };
   const isFormValid = email.trim() !== '' && password.trim() !== '';
 
+  const handleGoogleButtonClick = async () => {
+    try {
+      await googleAuth();
+    } catch (error) {
+      console.error('Error during Google authentication:', error);
+    }
+  };
+
   return (
     <div className={styles.formContainer}>
+      <GoogleButton onClick={handleGoogleButtonClick} />
       <form className={styles.form} onSubmit={handleSubmit}>
-        <GoogleButton></GoogleButton>
         <div className={styles.labelWrapper}>
           <div className={styles.labelContainer}>
             <label className={styles.label}>
@@ -62,7 +73,7 @@ const LoginForm = ({ onLogin, isLoggingIn, error }) => {
         >
           Log In
         </button>
-        {isLoggingIn && Loader}
+        {isLoggingIn && <Loader />}
         {error && <p>{error}</p>}
       </form>
       <Link to="/register" className={styles.link}>
