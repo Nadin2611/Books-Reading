@@ -1,5 +1,10 @@
-import { lazy } from 'react';
+import { useState, useEffect, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import useAuth from '../services/useAuth';
+import { Loader } from './Loader';
+import { PublicRoute } from './routes/PublicRoute';
+import { PrivateRoute } from './routes/PrivateRoute';
+import { Layout } from './Layout';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const LoginPage = lazy(() => import('../pages/Login'));
@@ -7,14 +12,53 @@ const RegisterPage = lazy(() => import('../pages/Register'));
 const LibraryPage = lazy(() => import('../pages/LibraryPage'));
 
 export const App = () => {
-  return (
-    <div>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/library" element={<LibraryPage />} />
-      </Routes>
-    </div>
+  const [isRefreshing, setIsRefreshing] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const { refreshTokens } = useAuth();
+
+  useEffect(() => {
+    const refreshUser = async () => {
+      try {
+        const refreshToken = refreshTokens();
+        if (refreshToken) {
+          await refreshTokens(refreshToken);
+          setIsLoggedIn(true);
+        }
+      } catch (error) {
+        console.error('Error refreshing user:', error);
+      } finally {
+        setIsRefreshing(false);
+      }
+    };
+    refreshUser();
+  }, [refreshTokens]);
+
+  return isRefreshing ? (
+    <Loader />
+  ) : (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route
+          path="/register"
+          element={
+            <PublicRoute redirectTo="/library" component={<RegisterPage />} />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <PublicRoute redirectTo="/library" component={<LoginPage />} />
+          }
+        />
+        <Route
+          path="/library"
+          element={
+            <PrivateRoute redirectTo="/login" component={<LibraryPage />} />
+          }
+        />
+      </Route>
+    </Routes>
   );
 };

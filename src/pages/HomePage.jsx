@@ -1,18 +1,10 @@
+import React from 'react';
 import Container from 'components/Container';
-import { Header } from 'components/Header';
-import { Loader } from 'components/Loader';
+import useAuth from '../services/useAuth';
 import Visit from 'components/Visit';
-import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
 
 export default function HomePage() {
-  return (
-    <Container>
-      <Header></Header>
-      <Visit></Visit>
-      <Suspense fallback={<Loader />}>
-        <Outlet />
-      </Suspense>
-    </Container>
-  );
+  const { isLoggedIn } = useAuth();
+
+  return <Container>{!isLoggedIn && <Visit />}</Container>;
 }
