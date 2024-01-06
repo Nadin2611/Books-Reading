@@ -38,8 +38,11 @@ export const RegistrationForm = () => {
                 type="name"
                 name="name"
                 value={name}
+                minLength={2}
+                maxLength={20}
                 placeholder="..."
                 autoComplete="false"
+                pattern="[a-zA-Zа-яА-ЯІіЇїЄє ]+(([' \-][a-zA-Zа-яА-ЯІіЇїЄє ])?[a-zA-Zа-яА-ЯІіЇїЄє])+$"
                 onChange={event => setName(event.target.value)}
                 required
               />
@@ -56,6 +59,7 @@ export const RegistrationForm = () => {
                 value={email}
                 placeholder="your@email.com"
                 autoComplete="false"
+                pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
                 onChange={event => setEmail(event.target.value)}
                 required
               />
@@ -72,6 +76,9 @@ export const RegistrationForm = () => {
                 value={password}
                 placeholder="..."
                 autoComplete="false"
+                minLength={7}
+                title="Minimum 7 characters, including numbers and symbols"
+                pattern="/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g"
                 onChange={event => setPassword(event.target.value)}
                 required
               />
