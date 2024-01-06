@@ -16,6 +16,7 @@ export const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const { refreshTokens } = useAuth();
+  console.log(isLoggedIn);
 
   useEffect(() => {
     const refreshUser = async () => {
