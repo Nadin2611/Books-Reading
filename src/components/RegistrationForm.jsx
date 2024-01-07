@@ -76,8 +76,8 @@ export const RegistrationForm = () => {
                 value={password}
                 placeholder="..."
                 autoComplete="false"
-                minLength={7}
-                title="Minimum 7 characters, including numbers and symbols"
+                minLength={8}
+                title="Minimum 8 characters, including numbers and symbols"
                 pattern="/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g"
                 onChange={event => setPassword(event.target.value)}
                 required
