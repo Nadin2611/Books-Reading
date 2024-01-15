@@ -34,6 +34,7 @@ const useAuth = () => {
       setIsLoggingIn(false);
       setError(null);
       console.log('Logged in:', data);
+      console.log(isLoggedIn);
     } catch (error) {
       setIsLoggedIn(false);
       setIsLoggingIn(false);

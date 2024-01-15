@@ -21,7 +21,7 @@ export const App = () => {
   useEffect(() => {
     const refreshUser = async () => {
       try {
-        const refreshToken = refreshTokens();
+        const refreshToken = await refreshTokens();
         if (refreshToken) {
           await refreshTokens(refreshToken);
           setIsLoggedIn(true);
@@ -33,7 +33,8 @@ export const App = () => {
       }
     };
     refreshUser();
-  }, [refreshTokens]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return isRefreshing ? (
     <Loader />
@@ -56,7 +57,10 @@ export const App = () => {
         <Route
           path="/library"
           element={
-            <PrivateRoute redirectTo="/login" component={<LibraryPage />} />
+            <PrivateRoute
+              redirectTo="/login"
+              component={<LibraryPage />}
+            ></PrivateRoute>
           }
         />
       </Route>

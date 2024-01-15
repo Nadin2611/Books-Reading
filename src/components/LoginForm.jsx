@@ -11,12 +11,13 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const { login, googleAuth, isLoggingIn, error } = useAuth();
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault();
-    login({ email, password });
+    await login({ email, password });
     setEmail('');
     setPassword('');
   };
+
   const isFormValid = email.trim() !== '' && password.trim() !== '';
 
   const handleGoogleButtonClick = async () => {
